@@ -15,11 +15,11 @@
         <script src="jquery.scrollTo.min"></script>
     </head>
     <body>
-        <div class="container">
+        <div id="container">
             <div id="title">
                 <h1>Create your matrix</h1>
             </div>
-                <a href="#" class="scrollup">
+                <a href="#" id="scrollup">
                 <form action= "Return">
                 <input type="submit" id="stickyReturnSubmit" value="Start from the begginig">
                 </form>

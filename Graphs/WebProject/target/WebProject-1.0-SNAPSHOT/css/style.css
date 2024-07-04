@@ -16,26 +16,23 @@ body
     width: 100vw;
 } 
 
-.container
+#container
 {
-    /*width: 1000px; */
     width: 100vw;
     height: 100vh;
-    margin-left: auto; /*wyśrodkowanie diva*/
-    margin-right: auto;	/*wyśrodkowanie diva*/
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #title
 {
     color: #feb236;
     height: 20vh;
-     /*width: 1000px; */
     width: 100vw;
-    margin-left: auto; /*wyśrodkowanie diva*/
-    margin-right: auto;	/*wyśrodkowanie diva*/
+    margin-left: auto;
+    margin-right: auto;
     font-size: 35px;
     text-align: center; 
-    /*background-color: #ff0000; */
 }
 
 #about
@@ -49,7 +46,6 @@ body
     text-align: center;
 }
 
-
 #menu
 {
     margin-left: auto;
@@ -60,7 +56,7 @@ body
     font-size: 50px; 
 }
 
-.box
+#box
 {
     margin-left: auto;
     margin-right: auto;
@@ -143,9 +139,9 @@ input[type=submit]:hover{
     float:left;
 }
 
-#withTextBox{
+/*#withTextBox{
     text-align: left;
-}
+} */
 
 .txBox{
     width: 15vw;
@@ -177,14 +173,14 @@ a:hover{
     text-decoration: none;
 }
 
-.scrollup{
+#scrollup{
     position: fixed;
     width: 15vw;
     height: 5vh;
     margin-left: 80vw;
 }
 
-#dziwnyReturnSubmit{
+#stickyReturnSubmit{
     width: 15vw;
     height: 5vh;
     font-weight: normal;

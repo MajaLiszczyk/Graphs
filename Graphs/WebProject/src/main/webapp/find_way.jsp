@@ -13,11 +13,11 @@
         <title>Servlet FindWay</title>
     </head>
     <body>
-        <div class="container">
+        <div id="container">
             <div id="title">
                 <h1>Result</h1>
             </div>
-            <div class="box">                      
+            <div id="box">                      
                 <%String cost = (String)session.getAttribute("cost");%>
                 The lowest cost is: <%=cost %>
                 <form action= "Calculation">

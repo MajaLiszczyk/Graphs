@@ -15,11 +15,11 @@
         <title>Servlet CalculationServlet</title>
     </head>
     <body>
-        <div class="container">
+        <div id="container">
             <div id="title">
                 <h1>Find the way</h1>
             </div>
-            <div class="box">
+            <div id="box">
                 <form action= "FindWay">
                 <div>
                     <label class="label" for="nodesF">Choose start node: </label>

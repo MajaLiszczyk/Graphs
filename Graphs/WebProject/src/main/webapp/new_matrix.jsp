@@ -13,11 +13,11 @@
         <title>Servlet NewMatrixServlet</title>
     </head>
     <body>
-        <div class="container">
+        <div id="container">
             <div id="title">
                 <h1>New Matrix </h1>
             </div>
-            <div class="box">
+            <div id="box">
                <form action= "Size">
                        <label class="label">Set size of the matrix:</label>
                        <select name="size" id="size">

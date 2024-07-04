@@ -13,11 +13,11 @@
         <title>Servlet SetupServlet</title>
     </head>
     <body>
-        <div class="container">
+        <div id="container">
             <div id="title">
                 <h1>Calculate the cost </h1>
             </div>
-            <div class="box">
+            <div id="box">
                 <form action= "Return">
                 <p>Matrix added to base </p>
                 <p><input type="submit" value="OK"></p>

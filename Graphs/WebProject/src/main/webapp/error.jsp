@@ -13,11 +13,11 @@
         <title>Servlet ErrorServlet</title>
     </head>
     <body>
-        <div class="container">
+        <div id="container">
             <div id="title">
                 <h1>Error</h1>
             </div>
-            <div class="box">
+            <div id="box">
                 <%String s = (String)request.getAttribute("error"); %>
                 <form action= "Return">
                     <%=s%>

@@ -15,11 +15,11 @@
         <title>Servlet ChooseMatrixServlet</title>
     </head>
     <body>
-        <div class="container">
+        <div id="container">
             <div id="title">
                 <h1>Choose Matrix</h1>
             </div>
-            <div class="box">
+            <div id="box">
             <form id="chooseMatrixForm" action= "Calculation">
                 <select name="matrixToChoose" id="matrixToChooseSelect">
                 <%
