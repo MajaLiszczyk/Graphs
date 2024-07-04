@@ -20,11 +20,9 @@
                 <h1>Find the way</h1>
             </div>
             <div class="box">
-                <!--FindWay form begginig -->
                 <form action= "FindWay">
-                <!--Start nodes -->
                 <div>
-                    <label for="nodesF">Choose start node: </label>
+                    <label class="label" for="nodesF">Choose start node: </label>
                     <select name="nodesF" id="nodesF">
                     <%
                         Matrix matrix = (Matrix)session.getAttribute("graph");
@@ -33,28 +31,23 @@
                             <option value="<%=i %>"> <%=Integer.toString(i) %> </option>
                         <% } %>
                     </select>
+                    <div class="clear"></div>
                 </div>
                 <div>
-                    <!--End nodes -->
-                    <label for="nodesE">Choose end node: </label>
+                    <label class="label" for="nodesE">Choose end node: </label>
                     <select name="nodesE" id="nodesE">
                     <% for(int i = 1; i <= size; i++){ %>
                         <option value="<%=i %>"> <%=Integer.toString(i) %> </option>
                     <% } %>
                     </select>
+                    <div class="clear"></div>
                 </div>
-                
-                <input type="submit" value="Calculate"></p>
+                <input type="submit" value="Calculate">
                 </form>
-                <!--FindWay form end -->
             </div>
-            <!--Return form beggining -->
             <form action= "Return">
-                <input type="submit" id="returnSubmit" value="Start from the begginig"></p>
+                <input type="submit" id="returnSubmit" value="Start from the begginig">
             </form>
-            <!--Return form end -->
-   
-        </div>
-        
+        </div>   
     </body>
 </html>

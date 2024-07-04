@@ -32,30 +32,6 @@ public class NewMatrixServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         response.sendRedirect(request.getContextPath() + "/new_matrix.jsp");
-        
-        /*
-        try (PrintWriter out = response.getWriter()) {
-            
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet NewMatrixServlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>New Matrix </h1>");
-
-            out.println("<form action= \"Size\">");
-            out.println("<p>Set size of the matrix: </p>");
-            out.println("<p><input type=text size=2 name=size></p>");
-            out.println("<p>Set name of the matrix: <input type=text size=20 name=nameMatrix></p>");
-            out.println("<input type=\"submit\" value=\"OK\" />");
-            out.println("</form>");
-
-            
-            out.println("</body>");
-            out.println("</html>");
-        }
-    */
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

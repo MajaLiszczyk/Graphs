@@ -34,12 +34,13 @@ public class SizeServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        int size = Integer.parseInt(request.getParameter("size"));
         
-        String size = request.getParameter("size");
+        //String size = request.getParameter("size");
         String nameMatrix = request.getParameter("nameMatrix");
         try{
             HttpSession session = request.getSession();
-            session.setAttribute("size", Integer.valueOf(size));
+            session.setAttribute("size", size);
             session.setAttribute("nameMatrix", String.valueOf(nameMatrix));
             if((nameMatrix==null) || (nameMatrix.length() == 0)){
                 RequestDispatcher requestDispatcher=request.getRequestDispatcher("/Error");

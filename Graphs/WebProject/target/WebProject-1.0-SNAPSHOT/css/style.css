@@ -12,11 +12,15 @@ body
     color: #ffffff;
     font-size: 20px;
     margin: 0 auto;
+    height: 100vh;
+    width: 100vw;
 } 
 
 .container
 {
-    width: 1000px;
+    /*width: 1000px; */
+    width: 100vw;
+    height: 100vh;
     margin-left: auto; /*wyśrodkowanie diva*/
     margin-right: auto;	/*wyśrodkowanie diva*/
 }
@@ -24,7 +28,9 @@ body
 #title
 {
     color: #feb236;
-    width: 1000px;
+    height: 20vh;
+     /*width: 1000px; */
+    width: 100vw;
     margin-left: auto; /*wyśrodkowanie diva*/
     margin-right: auto;	/*wyśrodkowanie diva*/
     font-size: 35px;
@@ -34,97 +40,119 @@ body
 
 #about
 {
-    width: 1000px;
-    height: 100px;
-    margin-left: auto; /*wyśrodkowanie diva*/
-    margin-right: auto;	/*wyśrodkowanie diva*/
+    width: 80vw;
+    height: 20vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10vh;
     font-size: 15px;
     text-align: center;
-    /*background-color: #0000ff; */
 }
 
 
 #menu
 {
-    margin-left: auto; /*wyśrodkowanie diva*/
-    margin-right: auto;	/*wyśrodkowanie diva*/
-    /*font-size: 50px; */
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
-    width:  424px; 
-    /*margin-top: 70px;*/
-    height: 264px;
-    font-size: 50px;
-    padding: 2px;
-   /* background-color: #00ff00; */
-    
+    width: 40vw;
+    height: 40vh;
+    font-size: 50px; 
 }
+
 .box
 {
-    margin-left: auto; /*wyśrodkowanie diva*/
-    margin-right: auto;	/*wyśrodkowanie diva*/
-    /*font-size: 50px; */
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
-    width:  424px; 
-    margin-top: 150px;
-    height: 364px;
+    width: 40vw;
+    margin-top: 15vh;
+    height: 40vh;
     font-size: 20px;
-    font-weight: bold;
-    padding: 2px;
-
-    
+    font-weight: bold; 
 }
 
-/*.form{
-    display: flex; 
-} */
+#boxWhereScroll{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 60vw;
+    height: 100vh;
+    font-size: 20px;
+    font-weight: bold; 
+    margin-top: 10vh;
+}
 
-/*#find input[type="submit"]{ */
+
+.menuForm{
+    height: 16vh;
+}
+
+#chooseMatrixForm{
+    height: 26vh;
+}
+
 input[type=submit]{ 
     width: 100%;
-    height: 50px;
-    margin-bottom: 40px;
-    margin-top: 40px;
+    height: 10vh;
+    margin-bottom: 3vh; 
+    margin-top: 3vh;
     font-size: 20px;
     background-color: #feb236;
     font-weight: bold;
 }
+
 input[type=submit]:hover{
     background-color: #ce8206;
 }
 
 #returnSubmit{
-    /*margin-left: 300px;*/
-    margin-left: 512px; 
-    width: 200px;
-    font-size: 12px;
+    margin-left: 55vw; 
+    width: 15vw;
+    height: 5vh;
+    font-size: 15px;
     font-weight: normal;
+    background-color: #9ba6a5;
 }
 
-#matrixToChoose{
-    height: 50px;
+#matrixToChooseSelect{
     width: 100%;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    font-size: 20px;   
+    height: 10vh;
+    font-size: 20px;    
     text-align: center;
 }
-#nodesE,#nodesF{
-    height: 50px;
-    width: 30%;
-    margin-top: 20px;
+
+#nodesE,#nodesF,#size{
+    height: 8vh;
+    width: 10vw;
+    margin-left: 5vw;
     margin-bottom: 20px;
     font-size: 20px;   
     text-align: center;
+    float:left;
 }
+
+.clear{
+    clear: both;
+}
+
+.label{
+    width: 15vw;
+    margin-top: 2vh;
+    margin-left: 4vw;
+    float:left;
+}
+
 #withTextBox{
     text-align: left;
 }
 
 .txBox{
-    width: 200px;
-    height: 40px;
+    width: 15vw;
+    height: 8vh;
     margin-bottom: 10px;  
-    float: right;
+    float: left;
+    margin-left: 5vw;
 }
 
 #matrixElement{
@@ -138,10 +166,12 @@ a:link{
     text-decoration: none;
     font-size: 15px;
 }
+
 a:visited{
     color: #D44720;
     text-decoration: none;
 }
+
 a:hover{
     color: #B42700;
     text-decoration: none;
@@ -149,6 +179,20 @@ a:hover{
 
 .scrollup{
     position: fixed;
-    right: 250px;
-    top: 250px;
+    width: 15vw;
+    height: 5vh;
+    margin-left: 80vw;
+}
+
+#dziwnyReturnSubmit{
+    width: 15vw;
+    height: 5vh;
+    font-weight: normal;
+    background-color: #9ba6a5;
+    margin-bottom: 0vh; 
+    margin-top: 0vh;
+}
+
+#stickyReturnSubmit:hover{
+   background-color: #7b8685;
 }

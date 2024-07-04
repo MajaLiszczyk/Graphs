@@ -16,19 +16,17 @@
     </head>
     <body>
         <div class="container">
-            <a href="#" class="scrollup">
-                <form action= "Return">
-                <input type="submit" id="returnSubmit" value="Start from the begginig">
-                </form>
-            </a>
             <div id="title">
                 <h1>Create your matrix</h1>
             </div>
-            <div class="box">
+                <a href="#" class="scrollup">
+                <form action= "Return">
+                <input type="submit" id="stickyReturnSubmit" value="Start from the begginig">
+                </form>
+                </a>         
+            <div id="boxWhereScroll">
                 <p>Fill in the fields. Write x if it is infinity: </p>
-                <!--Setup form begginig -->
-                <form action= "Setup">
-                    
+                <form action= "Setup">                   
                     <%
                     Integer size = (Integer)session.getAttribute("size");
                     for(int i = 0; i < size ; i++){ %>
@@ -41,12 +39,7 @@
                     <%}%>
                     <p><input type="submit" value="OK"></p>
                 </form>
-                    <!--Setup form end -->
             </div>
-            <!--Return form beggining -->
-            
-           <!--Return form end -->
         </div>
-        
     </body>
 </html>

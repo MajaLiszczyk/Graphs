@@ -20,10 +20,8 @@
                 <h1>Choose Matrix</h1>
             </div>
             <div class="box">
-            <form action= "Calculation">
-            
-                 <!--combobox with matrix -->
-                <select name="matrixToChoose" id="matrixToChoose">
+            <form id="chooseMatrixForm" action= "Calculation">
+                <select name="matrixToChoose" id="matrixToChooseSelect">
                 <%
                 List<Matrix> matrixList = (List<Matrix>)session.getAttribute("matrix");
                 for (Matrix matrix : matrixList) { %>
@@ -31,14 +29,9 @@
                 <% }
                 %>
                 </select>
-
                 <input type="submit" value="I want to start calculation">
                 </form>
                 </div>
-
-           
-            
         </div>
-       
     </body>
 </html>
