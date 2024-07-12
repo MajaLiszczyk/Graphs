@@ -60,31 +60,6 @@ public class FindWayServlet extends HttpServlet {
         }
         session.setAttribute("cost", cost);
         response.sendRedirect(request.getContextPath() + "/find_way.jsp");
-        /*try (PrintWriter out = response.getWriter()) {
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet FindWay</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Result</h1>");
-            out.println("The lowest cost is: " + cost + "</p>");
-            
-            //Go back to previous form - Calculation
-            out.println("<form action= \"Calculation\">");
-            out.println("<input type=\"submit\" value=\"Return\"></p>");
-            out.println("</form>");
-            //
-            
-            //Return form beggining
-            out.println("<form action= \"Return\">");
-            out.println("<input type=\"submit\" value=\"Start from the begginig\"></p>");
-            out.println("</form>");
-            //Return form end
-            
-            out.println("</body>");
-            out.println("</html>");
-        }*/
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

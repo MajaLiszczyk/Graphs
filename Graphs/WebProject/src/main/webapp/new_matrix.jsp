@@ -34,7 +34,7 @@
                        <div class="clear"></div>
                             <!-- <input type=text class="txBox" name=size> -->
                        <label class="label">Set name of the matrix:</label>
-                       <input type=text class="txBox" name=nameMatrix>
+                       <input type=text class="txBox" name=nameMatrix maxlength="25">
                        <div class="clear"></div>
                        <input type="submit" value="OK" /> 
                 </form>

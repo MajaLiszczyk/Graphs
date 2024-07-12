@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="java.lang.String"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -18,12 +19,14 @@
                 <h1>Error</h1>
             </div>
             <div id="box">
-                <%String s = (String)request.getAttribute("error"); %>
+                <%String s = (String)session.getAttribute("error"); %>
                 <form action= "Return">
                     <%=s%>
                     <input type="submit" value="Try again"></p>
                 </form>
             </div>
+
+
         </div>       
     </body>
 </html>

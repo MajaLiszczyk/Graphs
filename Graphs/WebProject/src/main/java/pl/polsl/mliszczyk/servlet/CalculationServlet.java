@@ -68,50 +68,7 @@ public class CalculationServlet extends HttpServlet {
             
         }
         
-        response.sendRedirect(request.getContextPath() + "/calculation.jsp");
-       
-        
-        /*try (PrintWriter out = response.getWriter()) {
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet CalculationServlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Find the way</h1>");
-            
-            //FindWay form begginig
-            out.println("<form action= \"FindWay\">");
-            
-            //Start nodes
-            out.println("<label for=\"nodesF\">Choose start node: </label>");
-            out.println("<select name=\"nodesF\" id=\"nodesF\">");
-            for(int i = 1; i <= size; i++){
-                out.println("<option value=\"" + i + "\">" + i+ "</option>");
-            }
-            out.println("</select>");
-            
-            //End nodes
-            out.println("<label for=\"nodesE\">Choose end node: </label>");
-            out.println("<select name=\"nodesE\" id=\"nodesE\">");
-            for(int i = 1; i <= size; i++){
-                out.println("<option value=\"" + i + "\">" + i+ "</option>");
-            }
-             out.println("</select>");
-             
-             out.println("<input type=\"submit\" value=\"Calculate\"></p>");
-             out.println("</form>");
-             //FindWay form end
-                         
-            //Return form beggining
-            out.println("<form action= \"Return\">");
-            out.println("<input type=\"submit\" value=\"Start from the begginig\"></p>");
-            out.println("</form>");
-            //Return form end
-            
-            out.println("</body>");
-            out.println("</html>");
-        } */       
+        response.sendRedirect(request.getContextPath() + "/calculation.jsp");     
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

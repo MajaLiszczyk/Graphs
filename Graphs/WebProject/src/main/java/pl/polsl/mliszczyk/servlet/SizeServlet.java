@@ -4,6 +4,8 @@
  */
 package pl.polsl.mliszczyk.servlet;
 
+import jakarta.inject.Inject;
+import jakarta.persistence.EntityManager;
 import jakarta.servlet.RequestDispatcher;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -13,6 +15,9 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import java.util.List;
+import pl.polsl.mliszczyk.model.Matrix;
+import pl.polsl.mliszczyk.model.Model;
 
 /**
  *
@@ -20,6 +25,12 @@ import jakarta.servlet.http.HttpSession;
  */
 @WebServlet(name = "SizeServlet", urlPatterns = {"/Size"})
 public class SizeServlet extends HttpServlet {
+    
+    /**
+    * Model.
+    */
+    @Inject
+    private Model model;
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -35,17 +46,28 @@ public class SizeServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         int size = Integer.parseInt(request.getParameter("size"));
-        
-        //String size = request.getParameter("size");
         String nameMatrix = request.getParameter("nameMatrix");
+        
+        EntityManager em = model.getEntityManager();
         try{
+            List<Matrix> matrixSameName = em.createQuery("SELECT p FROM Matrix p WHERE p.nameMatrix LIKE :nameMatrix")
+            .setParameter("nameMatrix", nameMatrix)
+            .getResultList();
             HttpSession session = request.getSession();
             session.setAttribute("size", size);
             session.setAttribute("nameMatrix", String.valueOf(nameMatrix));
+            if((matrixSameName!=null) && (!matrixSameName.isEmpty())){
+                RequestDispatcher requestDispatcher=request.getRequestDispatcher("/Error");
+                request.setAttribute("error", "This matrix name already exists in database. ");
+                requestDispatcher.forward(request, response); 
+                return;
+            }
+            
             if((nameMatrix==null) || (nameMatrix.length() == 0)){
                 RequestDispatcher requestDispatcher=request.getRequestDispatcher("/Error");
                 request.setAttribute("error", "Wrong number format in size or wrong matrix name. ");
                 requestDispatcher.forward(request, response); 
+                return;
             }
         }
         catch(NumberFormatException  ex){
@@ -54,40 +76,6 @@ public class SizeServlet extends HttpServlet {
             requestDispatcher.forward(request, response);
         }
         response.sendRedirect(request.getContextPath() + "/size.jsp");
-
-       /* try (PrintWriter out = response.getWriter()) {
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet SizeServlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Create your matrix</h1>");
-                        
-            //Setup form begginig
-            out.println("<form action= \"Setup\">");
-            out.println("<p>Fill in the fields. Write x if it is infinity: </p>");
-            for(int i = 0; i < Integer.parseInt(size) ; i++){
-                out.println("<tr>");
-                for(int j = 0; j < Integer.parseInt(size) ; j++){
-                    out.println("<td><input type=\"text\" size=2 name=\"weight" +i+"" +j + "\"></td>"); //czy musi byc name?
-               }
-            out.println("<br/>");
-            out.println("</tr>");
-            }
-            out.println("<p><input type=\"submit\" value=\"OK\"></p>");
-            out.println("</form>");
-            //Setup form end
-            
-            //Return form beggining
-            out.println("<form action= \"Return\">");
-            out.println("<input type=\"submit\" value=\"Start from the begginig\">");
-            out.println("</form>");
-            //Return form end
-            
-            out.println("</body>");
-            out.println("</html>");
-        }*/ 
     }  
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

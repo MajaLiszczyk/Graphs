@@ -32,7 +32,7 @@
                     for(int i = 0; i < size ; i++){ %>
                         <tr>
                         <%for(int j = 0; j < size ; j++){ %>
-                            <td><input type="text" id="matrixElement" size=2 name="weight<%=i%><%=j%>" ></td>
+                            <td><input type="text" id="matrixElement" maxlength="5" size=2 name="weight<%=i%><%=j%>" ></td>
                     <% } %>
                     <br/>
                     </tr>

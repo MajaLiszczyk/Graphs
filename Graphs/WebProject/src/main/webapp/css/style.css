@@ -137,11 +137,7 @@ input[type=submit]:hover{
     margin-top: 2vh;
     margin-left: 4vw;
     float:left;
-}
-
-/*#withTextBox{
-    text-align: left;
-} */
+}   
 
 .txBox{
     width: 15vw;
@@ -149,6 +145,7 @@ input[type=submit]:hover{
     margin-bottom: 10px;  
     float: left;
     margin-left: 5vw;
+    font-size: 20px;
 }
 
 #matrixElement{

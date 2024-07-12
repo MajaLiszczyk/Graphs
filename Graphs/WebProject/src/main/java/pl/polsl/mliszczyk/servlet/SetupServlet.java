@@ -86,30 +86,12 @@ public class SetupServlet extends HttpServlet {
             RequestDispatcher requestDispatcher=request.getRequestDispatcher("/Error");
             request.setAttribute("error", ex.getMessage());
             requestDispatcher.forward(request, response);
+            return;
         }
         catch (Exception ex) {
             em.getTransaction().rollback();
         } 
         response.sendRedirect(request.getContextPath() + "/setup.jsp");
-
-
-       /* try (PrintWriter out = response.getWriter()) {
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet SetupServlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Calculate the cost </h1>");
-
-            out.println("<form action= \"Return\">");
-            out.println("<p>Matrix added to base </p>");
-            out.println("<p><input type=\"submit\" value=\"OK\"></p>");
-            out.println("</form>");
-            
-            out.println("</body>");
-            out.println("</html>");
-        } */
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

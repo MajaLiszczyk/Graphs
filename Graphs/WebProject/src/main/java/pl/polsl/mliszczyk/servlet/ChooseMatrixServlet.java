@@ -59,31 +59,6 @@ public class ChooseMatrixServlet extends HttpServlet {
             System.out.println("Found object: " + matrix.getMatrixName());
         }
         response.sendRedirect(request.getContextPath() + "/choose_matrix.jsp");
-       /* try (PrintWriter out = response.getWriter()) {
-            
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet ChooseMatrixServlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Choose Matrix</h1>");
-            
-            out.println("<form action= \"Calculation\">");
-
-            //comobox with matrix
-            out.println("<select name=\"matrixToChoose\" id=\"matrixToChoose\">");
-            for (Matrix matrix : matrixList) {
-                out.println("<option value=\"" + matrix.getID() + "\">" + matrix.getMatrixName()+ "</option>");
-            }
-            out.println("</select>");
-
-            out.println("<p><input type=\"submit\" value=\"I want to start calulation\"></p>");
-            out.println("</form>");
-            
-            out.println("</body>");
-            out.println("</html>");
-        }*/
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
